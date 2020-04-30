@@ -28,8 +28,8 @@ mark_as_advanced(USE_BOOST USE_EIGEN USE_XTENSOR)
 option(HIGHFIVE_USE_BOOST "Enable Boost Support" ${USE_BOOST})
 option(HIGHFIVE_USE_EIGEN "Enable Eigen testing" ${USE_EIGEN})
 option(HIGHFIVE_USE_XTENSOR "Enable xtensor testing" ${USE_XTENSOR})
-option(HIGHFIVE_UNIT_TESTS "Enable unit tests" ON)
-option(HIGHFIVE_EXAMPLES "Compile examples" ON)
+option(HIGHFIVE_UNIT_TESTS "Enable unit tests" OFF)
+option(HIGHFIVE_EXAMPLES "Compile examples" OFF)
 option(HIGHFIVE_PARALLEL_HDF5 "Enable Parallel HDF5 support" OFF)
 
 # In deplomyents we probably don't want/cant have dynamic dependencies
@@ -62,7 +62,7 @@ endif()
 include(${PROJECT_SOURCE_DIR}/CMake/HighFiveTargetDeps.cmake)
 
 # Setup HighFive to be used in 3rd party project using exports. Create a HighFive target
-include(${PROJECT_SOURCE_DIR}/CMake/HighFiveTargetExport.cmake)
+#include(${PROJECT_SOURCE_DIR}/CMake/HighFiveTargetExport.cmake)
 
 # Installation of headers (HighFive is only interface)
 install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/include/
