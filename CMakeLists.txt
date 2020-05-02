@@ -105,5 +105,5 @@ if(HIGHFIVE_UNIT_TESTS)
   add_subdirectory(tests/unit)
 endif()
 
-add_subdirectory(doc)
+#add_subdirectory(doc)
 
